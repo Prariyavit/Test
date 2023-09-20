@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" prefHeight="600.0" prefWidth="800.0" styleClass="borderpane" stylesheets="@../../styles/event-page.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.event.EventPageController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="675.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <TextField fx:id="searchField" prefHeight="22.0" prefWidth="160.0" promptText="Search" styleClass="search">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <ScrollPane fx:id="scrollpane" maxWidth="-Infinity" prefHeight="525.0" prefWidth="675.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <GridPane fx:id="grid" alignment="CENTER">
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <padding>
+                     <Insets left="20.0" />
+                  </padding>
+               </GridPane>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
